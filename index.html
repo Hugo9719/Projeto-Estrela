@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<!-- Font Awesome Icon Library -->
+		<link rel="stylesheet" href="stylesheet.css">
+		<meta charset="UTF-8">
+		<style>
+		
+
+		</style>
+</head>
+<body>
+
+		<h2>Avaliação</h2>
+		<form name="form">
+		<ul class="rate-area">
+		  <input type="radio" id="5-star" name="rating" value="Excelente  "/><label for="5-star" title="5" >5 stars</label>
+		  <input type="radio" id="4-star" name="rating" value="Ótimo" />     <label for="4-star" title="4" >4 stars</label>
+		  <input type="radio" id="3-star" name="rating" value="Bom" />       <label for="3-star" title="3" >3 stars</label>
+		  <input type="radio" id="2-star" name="rating" value="Regular" />   <label for="2-star" title="2" >2 stars</label>
+		  <input type="radio" id="1-star" name="rating" value="Ruim" />      <label for="1-star" title="1" >1 star</label>
+		</ul>
+		</form>
+		<div id="5-star" style="margin-top: 6%; color;" >
+		  <p id="myP"> </P>
+		</div>
+
+
+		<script>
+		var rad = document.form.rating;
+		var prev = null;
+		for (var i = 0; i <  rad.length; i++) {
+		  rad[i].onclick = function() {
+			qualquerFuncao(this);
+			
+		  }
+		};
+
+		function qualquerFuncao(e) {
+		  document.getElementById("myP").innerHTML = e.value;
+		  document.getElementById("myP").style.color = "red";
+		}
+       
+       
+
+		</script>
+
+</body>
+</html>
